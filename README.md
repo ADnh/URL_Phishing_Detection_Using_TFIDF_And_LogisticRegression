@@ -9,4 +9,6 @@ Step 1: Download packages: pip install requirements.txt
 
 Step 2: Open terminal and change direction to project location: cd *"Project'sPath"
 
-Step 3: Run file "./apis/main.py": python "./apis/main.py"
+Step 3: Change connection to your database (MySql Server): "mysql+pymysql://?account?:?password?@localhost:3306/?db?"
+
+Step 4: Run file "./apis/main.py": python "./apis/main.py"
