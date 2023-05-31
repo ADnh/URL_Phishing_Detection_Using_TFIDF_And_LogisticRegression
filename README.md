@@ -4,7 +4,7 @@ Final_TTCNTT
 API, Back-end for Url-Phishing-Detection System
 
 # How to use:
-Step 1:
-  Download packages: pip install requirements.txt
-Step 2:
-  Run file "./apis/main.py"
+
+Step 1: Download packages: pip install requirements.txt
+
+Step 2: Run file "./apis/main.py"
