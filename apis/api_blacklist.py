@@ -20,7 +20,7 @@ async def get_url(user_id: int):
     return blacklist_
 
 # Thêm url vào danh sách đen
-@router.post("/{user_id}-{url}-toBlackList")
+@router.post("/toBlackList")
 async def toBlackList(toBlackList: BlackListAdded):
     user = db.query(users).get(toBlackList.user_id)
     if not user:
