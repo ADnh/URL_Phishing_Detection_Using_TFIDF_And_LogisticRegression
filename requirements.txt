@@ -3,3 +3,5 @@ uvicorn
 gunicorn
 database
 sqlalchemy
+jose
+passlib
