@@ -7,4 +7,6 @@ API, Back-end for Url-Phishing-Detection System
 
 Step 1: Download packages: pip install requirements.txt
 
-Step 2: Run file "./apis/main.py"
+Step 2: Open terminal and change direction to project location: cd *"Project'sPath"
+
+Step 3: Run file "./apis/main.py": python "./apis/main.py"
