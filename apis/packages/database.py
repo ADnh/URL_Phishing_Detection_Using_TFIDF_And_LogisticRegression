@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, NVARCHAR, TIMESTAMP
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import declarative_base
+from sqlalchemy.orm import relationship
 # Đường dẫn url link db
 db_url = 'mysql+pymysql://root:Ducanh23%40@localhost:3306/urldb'
 engine = create_engine(db_url)
@@ -16,6 +17,7 @@ class users(Base):
     password = Column(String(255))
     email = Column(String(255))
     is_admin = Column(Integer)
+    scan_history = relationship("scan_history", back_populates="user")
 
 class urls(Base):
     __tablename__ = 'urls'
@@ -30,6 +32,7 @@ class scan_history(Base):
     result = Column(Integer)
     url = Column(String(255))
     user_id = Column(Integer, ForeignKey(users.id))
+    user = relationship("users", back_populates="scan_history")
 
 class blacklist(Base):
     __tablename__ = 'blacklist'
