@@ -7,8 +7,16 @@ from api_scan import router as scan_router
 from api_login import router as login_router
 from prediction import makeTokens
 import uvicorn
+from starlette.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(login_router, prefix= "")
 app.include_router(user_router, prefix= "/users")
